@@ -8,7 +8,17 @@
 #hello_world("es") should return "Hola Mundo"
 #hello_world("de") should return "Hallo Welt"
 
+def hello_world(language)
+  if language == "ea"
+    "Hola Mundo"
+  elsif language == "de"
+    "Hallo Welt"
+  else
+    "Hello World"
+  end
+end
 
+p hello_world("hello")
 
 # The Grade Assigner
 # Write a Method named assign_grade that:
@@ -17,6 +27,24 @@
 # returns a grade for the score, either "A", "B", "C", "D", or "F".
 # assign_grade(90) should return A
 # assign_grade(75) should return C
+
+def assign_grade(number)
+  if number >= 90
+    "A"
+  elsif number >= 80
+    "B"
+  elsif number >= 70
+    "C"
+  elsif number >= 50
+    "D"
+  else
+    "F"
+    end
+  end
+
+  p assign_grade(100)
+
+
 
 
 # The Pluralizer
@@ -29,3 +57,22 @@
 # Arguments will always be a number and a singular noun.
 
 # Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
+#
+
+def pluralizer(noun, number)
+  if noun == "goose" && number > 1
+      "#{number} geese"
+  elsif number > 1 && noun == "child"
+      "#{number} children"
+  elsif number > 1 && noun == "person"
+        "#{number} people"
+  elsif noun == "sheep" || noun == "species"
+    "#{number} #{noun}"
+  elsif number > 1
+      "#{number} #{noun}s"
+  else
+    "#{number} #{noun}"
+  end
+end
+
+p pluralizer("child", 1)
